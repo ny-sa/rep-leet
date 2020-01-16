@@ -6,6 +6,6 @@
 //My solution
 var largestPerimeter = function(A) {
     peri = A.sort((a, b) => b - a);
-    while(peri[0] >= peri[1] + peri[2]) peri.shift();
+    while(peri[0] >= peri[1] + peri[2]) peri.shift();   //ensure 3 longest sides can make a triangle
     return peri.length < 3 ? 0 : peri[0] + peri[1] + peri[2];
 };
