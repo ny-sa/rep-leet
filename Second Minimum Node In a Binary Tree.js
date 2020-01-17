@@ -30,3 +30,15 @@ Output: -1
 Explanation: The smallest value is 2, but there isn't any second smallest value.*/
 
 //My solution
+var findSecondMinimumValue = function(root) {
+    let nodes = []
+    const grabber = r => {
+        nodes.push(r.val)
+        if (r.left !== null) grabber(r.left);
+        if (r.right !== null) grabber(r.right);
+    }
+    grabber(root);
+    return nodes.length < 2 || nodes.every(e => e === nodes[0])
+        ? -1 : nodes.sort((a, b) => a - b)  //easy to code but not most efficient
+                    .filter(e => e !== nodes[0])[0];
+};
