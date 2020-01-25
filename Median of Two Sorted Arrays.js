@@ -19,8 +19,13 @@ The median is (2 + 3)/2 = 2.5*/
 
 //My solution
 var findMedianSortedArrays = function(nums1, nums2) {
-    let half = Math.floor((nums1.length + nums2.length)/2),
-    rand1 = nums1[Math.floor(Math.random() * nums1.length)], rand2 = nums2[Math.floor(Math.random() * nums2.length)];
-    return [rand1, rand2];
+    if (nums1.length + nums2.length === 2) return (nums1[0]+nums2[0])/2;
+    let half = Math.floor((nums1.length + nums2.length)/2), lowerHalfFound = false;
+    element1 = Math.floor(Math.random() * nums1.length), element2 = Math.floor(Math.random() * nums2.length);
+    while (!lowerHalfFound) {
+        if (element1+element2+2 < half) {
+            
+        }
+    }
 };
 console.log(findMedianSortedArrays([1,3,5,9],[2,4,6,8]))
