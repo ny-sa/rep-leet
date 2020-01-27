@@ -24,7 +24,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
     element1 = Math.floor(Math.random() * nums1.length), element2 = Math.floor(Math.random() * nums2.length);
     while (!lowerHalfFound) {
         if (element1+element2+2 < half) {
-            
+            if (nums1[element2] > num1[element1])
         }
     }
 };
