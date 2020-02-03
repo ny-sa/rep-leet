@@ -25,3 +25,10 @@ exention -> exection (replace 'n' with 'c')
 exection -> execution (insert 'u')*/
 
 //My solution
+var minDistance = function(word1, word2) {
+    
+};
+
+//step one: analyze common characters
+//step two: replace differing characters that are in the right location
+//step three: insert/delete all else
