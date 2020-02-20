@@ -26,9 +26,12 @@ exection -> execution (insert 'u')*/
 
 //My solution
 var minDistance = function(word1, word2) {
-    
+    let test = '';
+    word1.split('').forEach(char => {
+      if (word2.includes(char)) test += char;
+    })
+    return test;
 };
 
-//step one: analyze common characters
-//step two: replace differing characters that are in the right location
-//step three: insert/delete all else
+
+console.log(minDistance('groan', 'gold'));
