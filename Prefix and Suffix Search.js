@@ -18,4 +18,36 @@ words[i] has length in range [1, 10].
 prefix, suffix have lengths in range [0, 10].
 words[i] and prefix, suffix queries consist of lowercase letters only.*/
 
-//My solution
+/*
+ * @param {string[]} words
+ */
+var WordFilter = function(words) {
+  this.words = words;
+};
+
+/** 
+ * @param {string} prefix 
+ * @param {string} suffix
+ * @return {number}
+ */
+WordFilter.prototype.f = function(prefix, suffix) {
+    return this.words;
+};
+
+/*
+ * Your WordFilter object will be instantiated and called as such:
+ * var obj = new WordFilter(words)
+ * var param_1 = obj.f(prefix,suffix)
+ */
+
+let test = new WordFilter(['atmosphere',
+                           'lawyer',
+                           'proud',
+                           'first',
+                           'vegetation',
+                           'cutting',
+                           'coincide',
+                           'document',
+                           'discourage',
+                           'detail']);
+ console.log(test.f('di', 're'));
